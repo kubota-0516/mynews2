@@ -24,9 +24,10 @@ Route::controller(NewsController::class)->prefix('admin')->name('admin.')->middl
 });
 
 use App\Http\Controllers\Admin\ProfileController;
-Route::controller(ProfileController::class)->prefix('admin')->group(function() {
-    Route::get('profile/create', 'add')->middleware('auth');//リダイレクト設定
-    Route::get('profile/edit', 'edit')->middleware('auth');//リダイレクト設定
+Route::controller(ProfileController::class)->prefix('admin')->middleware('auth')->group(function() {
+    Route::get('profile/create', 'add');
+    Route::get('profile/edit', 'edit');
+    Route::post('profile/create', 'create');
 });
 Auth::routes();
 

@@ -40,7 +40,7 @@
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav">
 
-                            @guest
+                                @guest
                                     <li><a class="nav-link" href="{{ route('login') }}">{{ __('messages.login') }}</a></li>
                                 
                                     {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
@@ -59,7 +59,7 @@
                                             </form>
                                         </div>
                                     </li>
-                            @endguest
+                                @endguest
 
 
                         </ul>
