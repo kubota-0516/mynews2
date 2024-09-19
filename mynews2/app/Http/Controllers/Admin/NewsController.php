@@ -7,7 +7,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class NewsContoller extends Controller
+class NewsController extends Controller
 {
     //Routingは来たアクセスをControllerに渡しているのではなく、
     //Controllerの中のActionに渡している
@@ -15,5 +15,7 @@ class NewsContoller extends Controller
     public function add()
     {
         return view('admin.news.create');
+        //                      ^^^^^^ ファイル名 create.blade.php
+        //           ^^^^^^^^^^ フォルダ名 admin/news/
     }
 }
