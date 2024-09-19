@@ -22,14 +22,25 @@
     </head>
     <body>
         <div id="app">
-        {{-- 画面上部に表示するナビゲーションバーです。 --}}
-        <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
+            {{-- 画面上部に表示するナビゲーションバーです。 --}}
+            <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
                 <div class="container">
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
 
-                                @guest
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Left Side Of Navbar -->
+                        <ul class="navbar-nav ms-auto"></ul>
+
+                        <!-- Right Side Of Navbar -->
+                        <ul class="navbar-nav">
+
+                            @guest
                                     <li><a class="nav-link" href="{{ route('login') }}">{{ __('messages.login') }}</a></li>
                                 
                                     {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
@@ -48,17 +59,10 @@
                                             </form>
                                         </div>
                                     </li>
-                                @endguest
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                            @endguest
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <!-- Left Side Of Navbar -->
-                        <ul class="navbar-nav ms-auto"></ul>
 
-                        <!-- Right Side Of Navbar -->
-                        <ul class="navbar-nav"></ul>
+                        </ul>
                     </div>
                 </div>
             </nav>
