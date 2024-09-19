@@ -18,8 +18,9 @@ Route::get('/', function () {
 });
 
 use App\Http\Controllers\Admin\NewsController;
-Route::controller(NewsController::class)->prefix('admin')->group(function() {
-    Route::get('news/create', 'add')->middleware('auth');//リダイレクト設定
+Route::controller(NewsController::class)->prefix('admin')->name('admin.')->middleware('auth')->group(function() {
+    Route::get('news/create', 'add')->name('news.add');
+    Route::post('news/create', 'create')->name('news.create');//middlewareリダイレクト設定
 });
 
 use App\Http\Controllers\Admin\ProfileController;

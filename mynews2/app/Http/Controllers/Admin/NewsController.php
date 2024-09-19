@@ -18,4 +18,10 @@ class NewsController extends Controller
         //                      ^^^^^^ ファイル名 create.blade.php
         //           ^^^^^^^^^^ フォルダ名 admin/news/
     }
+
+    public function create(Request $request)
+    {
+        //admin/news/createにリダイレクトする
+        return redirect('admin/news/create');
+    }
 }
