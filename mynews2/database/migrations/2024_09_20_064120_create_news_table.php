@@ -19,7 +19,7 @@ return new class extends Migration
             $table->id();//レコードが新規作成される際に自動で埋まる
             $table->string('title');//ニュースのタイトルを保存するカラム
             $table->string('body');//ニュースの本文を保存するカラム
-            $table->string('image_path')->nullabel();//画像のパスを保存するカラム（空でも保存できます意）
+            $table->string('image_path')->nullable();//画像のパスを保存するカラム（空でも保存できます意）
             $table->timestamps();//レコードが新規作成される際に自動で埋まる
            
             //image_path以外の4つは保存時に必ず値が入るカラムの設定
