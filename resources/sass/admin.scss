@@ -1,42 +1,42 @@
 body {
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #008080; //変化チェック
+    background-color: #008080; //背景
     color: #fff;
   }
   
   .navbar-laravel {
-    background-color: #000;
+    background-color: #00F; //laravel～ユーザー名まで
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
   }
   
   .navbar-brand {
-    color: #fff !important;
+    color: #008000 !important;//変更チェック…どこ？
   }
   
   .nav-link {
-    color: #fff !important;
+    color: #ff0 !important;//変更チェック…どこ？
   }
   
   .table-dark {
-    color: #fff;
+    color: #f0f;//変更チェック…どこ？
   }
   
   .list-group-item {
-    border-color: #fff;
+    border-color: #808000;//変更チェック…どこ？
     background-color: #000;
   }
   
   .login-box {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #FF4F50(0, 0, 0, 0);//変更チェック…どこ？
   }
   
   .login-header {
-    background-color: rgba(0, 0, 0, 0.25)
+    background-color: rgba(0, 0, 0, 0.25)//変更チェック…どこ？
   }
   
   .login-body {
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: #40E0D0(0, 0, 0, 0.25);//変更チェック…どこ？
   }
   
   .form-group {
@@ -44,7 +44,7 @@ body {
   }
   
   .list-group-item {
-    color: #fff;
+    color: #f00;//変更チェック…どこ？
     border-color: #fff;
     background-color: #000;
   }
