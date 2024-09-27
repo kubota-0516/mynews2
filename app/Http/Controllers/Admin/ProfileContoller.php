@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Profile;
 
 class ProfileContoller extends Controller
 {
@@ -13,8 +14,20 @@ class ProfileContoller extends Controller
         return view('admin.profile.create');
     }
 
-    public function create()
+    public function create(Request $request)
     {
+        //validationを行う
+        $this->validate($request, Profile::$rules);
+        $profile = new Profile;
+        $form = $request->all();
+
+        //フォームから来た_tokenを削除
+        unset($form['_token']);
+
+        //データベースに保存する
+        $profile->fill($form);
+        $profile->save();
+
         return redirect('admin/profile/create');
     }
 
