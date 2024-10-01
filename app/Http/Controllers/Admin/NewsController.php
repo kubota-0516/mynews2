@@ -6,7 +6,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+
 use App\Models\News; //News modelが扱えるようになる
+
 
 class NewsController extends Controller
 {
@@ -54,10 +56,9 @@ class NewsController extends Controller
         $cond_title = $request->cond_title;
         if ($cond_title != '') {
             //検索されたら検索結果を取得する
-            $posts = News::where('title', $cond_title)->get();
-        } else {
-            //それ以外は全てのニュースを取得する
-            $posts = News::all();
+            $posts = News::where('title', $cond_title)->get();} else {
+                    //それ以外は全てのニュースを取得する
+                $posts = News::all();
         }
         return view('admin.news.index', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
@@ -98,5 +99,16 @@ class NewsController extends Controller
         $news->fill($news_form)->save();
 
         return redirect('admin/news');
+    }
+
+    public function delete(Request $request)
+    {
+        //該当するnewsmodelを取得
+        $news = News::find($request->id);
+
+        //削除する
+        $news->delete();
+
+        return redirect('admin/news/');
     }
 }

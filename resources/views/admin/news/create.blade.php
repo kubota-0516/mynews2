@@ -24,7 +24,7 @@
                     <div class="form-group row">
                         <label class="col-md-2">タイトル2</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="title" value="{{ old('title') }}">
+                            <input type="text" class="form-control" name="title" value="{{ old('title') }}"></input>
                         </div>
                     </div>
 
@@ -38,11 +38,11 @@
                     <div class="form-group row">
                         <label class="col-md-2">画像を追加する</label>
                         <div class="col-md-10">
-                            <input type="file" class="form-control-file" name="image">
+                            <input type="file" class="form-control-file" name="image"></input>
                         </div>
                     </div>
                     @csrf
-                    <input type="submit" class="btn btn-primary" value="更新する">
+                    <input type="submit" class="btn btn-primary" value="更新する"></input>
                 </form>
 
             </div>

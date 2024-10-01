@@ -29,9 +29,16 @@
                     </div>
 
                     <div class="form-group row">
+                        <label class="col-md 2">性別</label>
+                        <div class="col-md-10">
+                            <textarea class="form-control" name="gender" rows="20">{{ old('gender')}}</textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
                         <label class="col-md 2">趣味</label>
                         <div class="col-md-10">
-                            <taxtarea class="form-control" name="hobby" rows="20">{{ old('hobby')}}</textarea>
+                            <textarea class="form-control" name="hobby" rows="20">{{ old('hobby')}}</textarea>
                         </div>
                     </div>
 
@@ -41,6 +48,8 @@
                             <textarea class="form-control" name="introduction" rows="20">{{ old('introduction') }}</textarea>
                         </div>
                     </div>
+                    @csrf
+                    <input type="submit" class="btn btn-primary" value="更新する"></input>
             </div>
             
 

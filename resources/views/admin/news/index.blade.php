@@ -35,6 +35,7 @@
                                 <th width="20%">タイトル</th>
                                 <th width="50%">本文</th>
                                 <th width="10%">操作</th>
+                                <th width="10%">削除</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -43,10 +44,13 @@
                                     <th>{{ $news->id }}</th>
                                     <td>{{ Str::limit($news->title, 100) }}</td>
                                     <td>{{ Str::limit($news->body, 250) }}</td>
-                                    <div>
-                                        <a href="{{route('admin.news.edit', ['id => $news->id']) }}">編集</a>
-                                    </div>
-                                </tr>
+                                    <td>
+                                        <a href="{{route('admin.news.edit', ['id'=> $news->id]) }}">編集</a>
+                                    </td>
+                                    <td>
+                                        <a href="{{route('admin.news.delete', ['id' => $news->id]) }}">削除</a>
+                                        {{-- deleteになっているから削除される (削除機能はControllerの最後で一覧画面にリダイレクトしているため画面無くすぐ削除される) --}}
+                                    </td>
                             @endforeach
                         </tbody>
                     </table>
