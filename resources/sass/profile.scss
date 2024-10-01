@@ -1,13 +1,13 @@
 body {
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #EEFFFF	;//変更をチェック
+    background-color: #808000; //背景
     color: #fff;
   }
   
   .navbar-laravel {
-    background-color: #000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    background-color: #000; //上のlaravelバー
+    box-shadow: 0 2px 4px #00FFFF(0, 0, 0, 0.04); //文字
   }
   
   .navbar-brand {
